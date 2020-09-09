@@ -32,6 +32,9 @@ function App() {
 
   return (
     <Container>
+      <Quote
+        quote={quote}
+      />
       <Button
         onClick={callAPI}
       >
