@@ -10,7 +10,7 @@ const QuoteContainer = styled.div`
     @media (min-width: 992px) {
         margin-top: 10rem;
     }
-    
+
     h1 {
         font-family: Arial, Helvetica, sans-serif;
         text-align: center;
@@ -36,6 +36,7 @@ const QuoteContainer = styled.div`
 `;
 
 const Quote = ({quote}) => {
+    if (Object.keys(quote).length === 0) return null;
     return(
         <QuoteContainer> 
             <h1>{quote.quote}</h1>
