@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import styled from '@emotion/styled';
+import Quote from './components/Quote';
 
 const Container = styled.div`
   display: flex;
