@@ -21,12 +21,12 @@ const Button = styled.button`
 
 function App() {
   //Quotes state
-  const [quote, getQuote] = useState({})
+  const [quote, saveQuote] = useState({})
 
   const callAPI = async () => {
     const api = await fetch('https://breaking-bad-quotes.herokuapp.com/v1/quotes');
     const quote = await api.json();
-    getQuote(quote[0]);
+    saveQuote(quote[0]);
   }
 
   return (
