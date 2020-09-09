@@ -11,13 +11,19 @@ const Container = styled.div`
 
 const Button = styled.button`
   background: -webkit-linear-gradient(top left, #007d35 0%, #007d35 40%, #0f574e 100%);
-  background-size: 300px;
+  background-size: 330px;
   font-family:  Arial, Helvetica, sans-serif;
   color: #fff;
   margin-top: 3rem;
   padding: 1rem 3rem;
   font-size: 2rem;
   border: 2px solid black;
+  transition: background-size .5s ease;
+  
+  :hover {
+    cursor:pointer;
+    background-size: 400px;
+  }
 `;
 
 function App() {
@@ -43,7 +49,7 @@ function App() {
       <Button
         onClick={callAPI}
       >
-      Get quote
+      Get a new quote
     </Button>
     </Container>
   );

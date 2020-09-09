@@ -7,7 +7,7 @@ const QuoteContainer = styled.div`
     background-color: #fff;
     max-width:800px;
     
-    @media (min-width: 992px) {
+    @media (min-width: 850px) {
         margin-top: 10rem;
     }
 
