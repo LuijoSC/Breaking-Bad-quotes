@@ -20,9 +20,20 @@ const Button = styled.button`
 `;
 
 function App() {
+
+  const callAPI =() => {
+    const result = fetch('https://breaking-bad-quotes.herokuapp.com/v1/quotes');
+    const quote = result.then( response => {
+      return response.json()
+    });
+    console.log(quote)
+  }
+
   return (
     <Container>
-      <Button>
+      <Button
+        onClick={callAPI}
+      >
       Get quote
     </Button>
     </Container>
