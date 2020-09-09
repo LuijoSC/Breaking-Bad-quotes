@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import styled from '@emotion/styled';
 import Quote from './components/Quote';
 
@@ -29,6 +29,11 @@ function App() {
     const quote = await api.json();
     saveQuote(quote[0]);
   }
+
+  //Showing a quote when loading for the first time
+  useEffect( () => {
+    callAPI()
+  }, []);
 
   return (
     <Container>
