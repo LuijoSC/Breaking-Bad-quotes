@@ -22,11 +22,9 @@ const Button = styled.button`
 function App() {
 
   const callAPI =() => {
-    const result = fetch('https://breaking-bad-quotes.herokuapp.com/v1/quotes');
-    const quote = result.then( response => {
-      return response.json()
-    });
-    console.log(quote)
+    const api = fetch('https://breaking-bad-quotes.herokuapp.com/v1/quotes');
+    const quote = api.then( response => response.json() );
+    quote.then( result => console.log(result) );
   }
 
   return (
